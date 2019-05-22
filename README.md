@@ -4,7 +4,7 @@
 
 
 ## 使用效果
-![select-view](https://github.com/nobitas/select-view/raw/master/images/gif.gif)
+![select-view](./tools/images/gif.gif)
 
 ## 安装
 
