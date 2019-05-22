@@ -1,0 +1,26 @@
+<view class="main {{ isShow ? 'show' : ''}}">
+  <!-- 顶部搜索区域 -->
+  <view class="header">
+    <view class="label">
+      <icon></icon>
+      <input type="text" placeholder="搜索" value="{{ search }}" bindinput="searchData" />
+    </view>
+  </view>
+  <!-- 内容区域 -->
+  <scroll-view scroll-y enable-back-to-top="{{ true }}" class="scroll" scroll-into-view="{{ scrollIntoView !== '#' ? scrollIntoView : 'last' }}">
+    <view class="dl" wx:for="{{ list }}" id="{{ item.firstLetter !== '#' ?  item.firstLetter : 'last' }}" wx:key="firstLetter">
+      <view class="dt">{{ item.firstLetter }}</view>
+      <view class="dd" wx:for="{{ item.list }}" wx:key="label" data-item="{{ item }}" bindtap="selectItem">
+        <image src="{{ item[icon] }}" wx:if="{{ icon }}"/>
+        <span>{{ item[attr] }}</span>
+      </view>
+    </view>
+  </scroll-view>
+  <!-- 侧边导航 -->
+  <view class="sub_nav" id="subNav" catchtouchstart="subTouchStart" catchtouchmove="subTouchMove" catchtouchend="subTouchEnd">
+    <view class="option" wx:for="{{ list }}" data-firstLetter="{{ item.firstLetter }}" wx:key="firstLetter">
+      {{ item.firstLetter }}
+      <view class="max {{ item.firstLetter ===  scrollIntoView && subNavHint ? 'show' : '' }}" data-desc="{{ item.firstLetter }}"></view>
+    </view>
+  </view>
+</view>

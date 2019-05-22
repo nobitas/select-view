@@ -1,0 +1,66 @@
+page {
+	background: #f6f6f6;
+	font-size: 24rpx;
+	color: #666;
+}
+.title {
+	padding: 20rpx;
+	margin: 0 0 20rpx;
+	font-size: 36rpx;
+	font-weight: bold;
+	color: #333;
+	border-bottom: 1rpx solid #eee;
+}
+.btn {
+	display: flex;
+}
+.btn button {
+	background: #fff;
+}
+.table {
+	margin: 0 20rpx;
+	border: 1rpx solid #eee;
+	background: #fff;
+}
+.thead {
+	display: flex;
+}
+.thead .th {
+	display: inline-flex;
+	width: 20%;
+	justify-content: center;
+	align-items: center;
+	height: 60rpx;
+	border-right: 1rpx solid #eee;
+}
+.thead .th:last-of-type {
+	border-right: none;
+	width: 50%;
+}
+.thead .th:nth-of-type(3) {
+	width: 10%;
+}
+.tbody .tr {
+	display: flex;
+}
+.tr .td {
+	display: inline-flex;
+	width: 20%;
+	align-items: center;
+	justify-content: center;
+	min-height: 60rpx;
+	border-width: 1rpx 1rpx 0 0;
+	border-style: solid;
+	border-color: #eee;
+}
+.tr .td:nth-of-type(3) {
+	width: 10%;
+	color: red;
+}
+.tr .td:last-of-type {
+	width: 50%;
+}
+.code {
+	padding: 20rpx;
+	background: #eee;
+}

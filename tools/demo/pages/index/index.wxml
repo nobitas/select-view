@@ -1,0 +1,28 @@
+<view class="title">测试案例：</view>
+<view class="btn">
+  <button bindtap="changeShow">带icon版</button>
+  <button bindtap="changeShow2">无icon版</button>
+</view>
+<view class="title">参数说明：</view>
+<view class="table">
+	<view class="thead">
+		<view class="th">名称</view>
+		<view class="th">类型</view>
+		<view class="th">必填</view>
+		<view class="th">说明</view>
+	</view>
+	<view class="tbody">
+		<view class="tr" wx:for="{{ table }}" wx:key="index">
+			<view class="td">{{ item.name }}</view>
+			<view class="td">{{ item.type }}</view>
+			<view class="td">{{ item.need ? '*' : '' }}</view>
+			<view class="td">{{ item.desc }}</view>
+		</view>
+	</view>
+</view>
+<view class="title">代码示例：</view>
+<view class="code">
+	{{ code }}
+</view>
+<select-view data="{{ list }}" attr="desc" isShow="{{ isShow }}" icon="url" bindselected="selected"></select-view>
+<select-view data="{{ list }}" attr="desc" isShow="{{ isShow2 }}" bindselected="selected"></select-view>
